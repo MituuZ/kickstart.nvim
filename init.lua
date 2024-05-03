@@ -190,6 +190,41 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- File navigation
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+
+-- Alternative Esc
+vim.keymap.set('i', 'jj', '<Esc>')
+
+-- Move line up or down in visual mode
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
+-- TODO: Check what this does
+vim.keymap.set('n', 'J', 'mzJ^z')
+
+-- Center half page up/down and searches
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+
+-- TODO: I might want to change these to be non-line specific
+-- Add mappings for H and L to move to end and start
+vim.keymap.set('n', 'H', 'g^')
+vim.keymap.set('n', 'L', 'g$')
+vim.keymap.set('v', 'H', 'g^')
+vim.keymap.set('v', 'L', 'g$')
+vim.keymap.set('o', 'H', 'g^')
+vim.keymap.set('o', 'L', 'g$')
+
+-- Move partial lines
+vim.keymap.set('n', 'j', 'gj')
+vim.keymap.set('n', 'k', 'gk')
+
+-- Add alternative mapping for search
+vim.keymap.set('n', '-', '/')
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
