@@ -227,14 +227,13 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
--- TODO: I might want to change these to be non-line specific
 -- Add mappings for H and L to move to end and start
-vim.keymap.set('n', 'H', 'g^')
-vim.keymap.set('n', 'L', 'g$')
-vim.keymap.set('v', 'H', 'g^')
-vim.keymap.set('v', 'L', 'g$')
-vim.keymap.set('o', 'H', 'g^')
-vim.keymap.set('o', 'L', 'g$')
+vim.keymap.set('n', 'H', '^')
+vim.keymap.set('n', 'L', '$')
+vim.keymap.set('v', 'H', '^')
+vim.keymap.set('v', 'L', '$')
+vim.keymap.set('o', 'H', '^')
+vim.keymap.set('o', 'L', '$')
 
 -- Move partial lines
 vim.keymap.set('n', 'j', 'gj')
