@@ -236,8 +236,8 @@ vim.keymap.set('o', 'H', '^')
 vim.keymap.set('o', 'L', '$')
 
 -- Move partial lines
-vim.keymap.set('n', 'j', 'gj')
-vim.keymap.set('n', 'k', 'gk')
+vim.keymap.set('n', 'j', 'j')
+vim.keymap.set('n', 'k', 'k')
 
 -- Add alternative mapping for search
 vim.keymap.set('n', '-', '/')
