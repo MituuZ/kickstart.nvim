@@ -102,7 +102,7 @@ vim.g.have_nerd_font = true
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
-vim.opt.relativenumber = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
@@ -111,14 +111,14 @@ vim.o.mouse = 'a'
 vim.o.showmode = false
 
 -- Enable concealment for obsidian.nvim
-vim.opt.conceallevel = 1
+vim.o.conceallevel = 1
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-vim.opt.clipboard = 'unnamedplus'
+  vim.o.clipboard = 'unnamedplus'
 end)
 
 -- Enable break indent
@@ -1004,7 +1004,6 @@ require('lazy').setup({
       -- vim.cmd 'colorscheme rose-pine-dawn'
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
->>>>>>> 99e8f73 (Add rose-pine)
     end,
   },
 
